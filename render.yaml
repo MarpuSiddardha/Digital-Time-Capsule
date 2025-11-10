@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: digital-time-capsule
+    env: java
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: production
+      - key: SPRING_DATASOURCE_URL
+        value: ${DATABASE_URL}
