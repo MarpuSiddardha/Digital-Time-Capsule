@@ -26,9 +26,11 @@
 		<tag/>
 		<url/>
 	</scm>
-	<properties>
-		<java.version>23</java.version>
-	</properties>
+    <properties>
+        <java.version>21</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+    </properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -126,8 +128,9 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
 				<configuration>
 					<annotationProcessorPaths>
 						<path>
@@ -135,8 +138,9 @@
 							<artifactId>lombok</artifactId>
 						</path>
 					</annotationProcessorPaths>
-                    <source>23</source>
-                    <target>23</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <release>${java.version}</release>
                     <compilerArgs>--enable-preview</compilerArgs>
                 </configuration>
 			</plugin>
