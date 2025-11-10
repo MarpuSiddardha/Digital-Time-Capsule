@@ -9,3 +9,5 @@ services:
         value: production
       - key: SPRING_DATASOURCE_URL
         value: ${DATABASE_URL}
+      - key: MAVEN_OPTS
+        value: -Xmx512m -Xss512k -XX:CICompilerCount=2
