@@ -8,7 +8,7 @@ services:
       - key: SPRING_PROFILES_ACTIVE
         value: production
       - key: SPRING_DATASOURCE_URL
-        value: jdbc:postgresql://dpg-d48nr463jp1c73cma9q0-a:5432/timecapsule_eyn3
+        value: jdbc:postgresql://timecapsule_eyn3_user:mzyF0DlEfcrO1zGzvQBIvdagowO5oy1o@dpg-d48nr463jp1c73cma9q0-a/timecapsule_eyn3
       - key: SPRING_DATASOURCE_USERNAME
         value: timecapsule_eyn3_user
       - key: SPRING_DATASOURCE_PASSWORD
