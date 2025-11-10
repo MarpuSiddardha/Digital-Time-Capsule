@@ -1,11 +1,9 @@
 services:
   - type: web
     name: digital-time-capsule
-    env: java
-    buildCommand: |
-      mvn --version
-      mvn clean package -DskipTests
-    startCommand: java -jar target/*.jar
+    env: docker
+    buildCommand: docker build -t digital-time-capsule .
+    startCommand: docker run -p 10000:8080 digital-time-capsule
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: production
