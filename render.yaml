@@ -3,17 +3,15 @@ services:
     name: digital-time-capsule
     env: docker
     buildCommand: docker build -t digital-time-capsule .
-    startCommand: docker run -p 10000:8080 digital-time-capsule
+    startCommand: docker run -p 10000:8080 -e SPRING_PROFILES_ACTIVE=production digital-time-capsule
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: production
       - key: SPRING_DATASOURCE_URL
-        value: jdbc:${DATABASE_URL}
+        value: jdbc:postgresql://dpg-d48nr463jp1c73cma9q0-a/timecapsule_eyn3
       - key: SPRING_DATASOURCE_USERNAME
-        value: ${DB_USERNAME}
+        value: timecapsule_eyn3_user
       - key: SPRING_DATASOURCE_PASSWORD
-        value: ${DB_PASSWORD}
+        value: mzyF0DlEfcrO1zGzvQBIvdagowO5oy1o
       - key: JWT_SECRET
-        value: "Siddardha8639527856Capgemini1234567890!@#$1234567890@31$%^&*%^#$@&!%!@"
-      - key: SPRING_APPLICATION_JSON
-        value: '{"jwt": {"secret": "Siddardha8639527856Capgemini1234567890!@#$1234567890@31$%^&*%^#$@&!%!@"}}'
+        value: "@Siddardha8639527856Capgemini1234567890!@#$1234567890@31$%^&*%^#$@&!%!@"
