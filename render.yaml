@@ -14,4 +14,6 @@ services:
       - key: SPRING_DATASOURCE_PASSWORD
         value: ${DB_PASSWORD}
       - key: JWT_SECRET
-        value: ${JWT_SECRET}
+        value: "Siddardha8639527856Capgemini1234567890!@#$1234567890@31$%^&*%^#$@&!%!@"
+      - key: SPRING_APPLICATION_JSON
+        value: '{"jwt": {"secret": "Siddardha8639527856Capgemini1234567890!@#$1234567890@31$%^&*%^#$@&!%!@"}}'
