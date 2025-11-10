@@ -2,7 +2,9 @@ services:
   - type: web
     name: digital-time-capsule
     env: java
-    buildCommand: ./mvnw clean package -DskipTests
+    buildCommand: |
+      chmod +x mvnw
+      ./mvnw clean package -DskipTests
     startCommand: java -jar target/*.jar
     envVars:
       - key: SPRING_PROFILES_ACTIVE
