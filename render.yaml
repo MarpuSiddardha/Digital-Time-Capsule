@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: digital-time-capsule
+    name: Digital-Time-Capsule
     env: java
     buildCommand: mvn clean package -DskipTests
     startCommand: java -jar target/*.jar
