@@ -1,13 +1,13 @@
 services:
   - type: web
-    name: Digital-Time-Capsule
+    name: digital-time-capsule
     env: java
-    buildCommand: mvn clean package -DskipTests
+    buildCommand: |
+      mvn --version
+      mvn clean package -DskipTests
     startCommand: java -jar target/*.jar
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: production
       - key: SPRING_DATASOURCE_URL
         value: ${DATABASE_URL}
-      - key: MAVEN_OPTS
-        value: -Xmx512m -Xss512k -XX:CICompilerCount=2
