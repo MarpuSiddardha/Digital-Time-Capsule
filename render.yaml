@@ -8,6 +8,10 @@ services:
       - key: SPRING_PROFILES_ACTIVE
         value: production
       - key: SPRING_DATASOURCE_URL
-        value: ${DATABASE_URL}
+        value: jdbc:${DATABASE_URL}
+      - key: SPRING_DATASOURCE_USERNAME
+        value: ${DB_USERNAME}
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: ${DB_PASSWORD}
       - key: JWT_SECRET
         value: ${JWT_SECRET}
