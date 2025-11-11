@@ -8,10 +8,10 @@ services:
       - key: SPRING_PROFILES_ACTIVE
         value: production
       - key: SPRING_DATASOURCE_URL
-        value: jdbc:postgresql://timecapsule_eyn3_user:mzyF0DlEfcrO1zGzvQBIvdagowO5oy1o@dpg-d48nr463jp1c73cma9q0-a/timecapsule_eyn3
+        value: jdbc:postgresql://localhost:5432/timecapsule
       - key: SPRING_DATASOURCE_USERNAME
-        value: timecapsule_eyn3_user
+        value: postgres
       - key: SPRING_DATASOURCE_PASSWORD
-        value: mzyF0DlEfcrO1zGzvQBIvdagowO5oy1o
+        value: postgres
       - key: JWT_SECRET
         value: "@Siddardha8639527856Capgemini1234567890!@#$1234567890@31$%^&*%^#$@&!%!@"
